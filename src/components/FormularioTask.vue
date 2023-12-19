@@ -1,8 +1,15 @@
 <template>
-    <div class="box">
+    <div class="box formulario">
         <div class="columns">
-            <div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa.">
-                <input  type="text" class="input" placeholder="Qual tarefa você deseja iniciar" v-model="descricao"/>    
+            <div 
+                class="column is-8" 
+                role="form" 
+                aria-label="Formulário para criação de uma nova tarefa.">
+                <input  
+                    type="text" 
+                    class="input" 
+                    placeholder="Qual tarefa você deseja iniciar" 
+                    v-model="descricao"/>    
             </div>
             <div class="column">
                 <TemporizadorTask @aoTemporizadorFinalizado="finalizarTarefa"/>
@@ -39,3 +46,10 @@ export default defineComponent({
 })
 
 </script>
+
+<style>
+.formulario {
+  color: var(--texto-primario);
+  background-color: var(--bg-primario);
+}
+</style>
